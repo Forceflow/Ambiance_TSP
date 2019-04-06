@@ -4,7 +4,7 @@ A traveling salesman problem based on the song [_Ambiance, Ambiance_](https://ww
 ## Problem description
 In 2013, Belgian songsmith [Sam Gooris](https://nl.wikipedia.org/wiki/Sam_Gooris) rocked the charts with his dance hit [_Ambiance, Ambiance_](https://www.youtube.com/watch?v=EqdQyoAUQZ0).
 
-During the [Nerdland Podcast](www.nerdland.be), we looked at the lyrics of this song. In his anthem, Mr. Gooris eloquently describes how he visits several Belgian villages and cities in order to engage in party-related activities. However, the order in which he visits these locations is far from optimal. [Bart Van Peer](https://twitter.com/zebbedeusje) posed the question: **_What if Mr. Gooris could rearrange his travel itinerary (and, subsequently, his lyrics) to allow for an optimal usage of his time and mileage?_**
+During the [Nerdland Podcast](www.nerdland.be), we looked at the lyrics of this song. In his anthem, Mr. Gooris eloquently describes how he visits several Belgian villages and cities in order to engage in rhyming party-related activities. However, the order in which he visits these locations is far from optimal. [Bart Van Peer](https://twitter.com/zebbedeusje) posed the question: **_What if Mr. Gooris could rearrange his travel itinerary (and, subsequently, his lyrics) to allow for an optimal usage of his time and mileage?_**
 
 This is a classic example of a [Traveling Salesman](https://en.wikipedia.org/wiki/Travelling_salesman_problem) problem, a well-known problem in Computer Sciences which is NP-hard, which means that the worst-case running time of any problem-solving technique will increase superpolynomially with the number of cities. In this example, Mr. Gooris visits 26 locations in this order:
 
