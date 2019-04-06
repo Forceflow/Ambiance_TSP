@@ -39,3 +39,4 @@ The script requires **Python 3.6** or newer and depends on the , ``csv``, ``nump
  * Convert from Latitude/Longitude to actual kilometers using earth curvature, for more detailed stats
  * Use the Google Maps (or similar) API to fetch actual paths and their lengths between each location. (Like [here](http://www.theprojectspot.com/tutorial-post/solving-traveling-salesman-problem-using-google-maps-and-genetic-algorithms/9)).
  * Figure out the _exact_ location where Mr. Gooris would like to engage in party-related activities for added accuracy
+ * Attack the problem using a different technique, like genetic algorithms programming (Like [here](https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algorithm-tutorial-for-python-6fe5d2b3ca35)).
