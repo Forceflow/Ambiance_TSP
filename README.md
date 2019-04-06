@@ -28,7 +28,7 @@ Within an execution limit of 30 seconds, the solver returns the following optimi
 Mal -> As -> Leut -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint -> Reet -> Leest -> Boom -> Niel -> Puurs -> Doel -> Sinaai -> Heist -> Gits -> Bere -> Tielt -> Ghent -> Lot -> Vorst ->  Mal
 ```
 
-![TSP_difference](https://raw.githubusercontent.com/Forceflow/Ambiance_TSP/master/readme_img/TSP_diff.gif?token=ADcKF-cOpjr1rTPW9vM13iIsVL24D9PCks5cqR-VwA%3D%3D "Difference between original and optimized itinerary")
+![TSP_difference](https://raw.githubusercontent.com/Forceflow/Ambiance_TSP/master/readme_img/TSP_diff.gif "Difference between original and optimized itinerary")
 
 ## Installation
 The script requires **Python 3.6** or newer and depends on the , ``csv``, ``numpy`` and ``ortools`` packages, which you can install using your favorite package manager, for example: ``pip install csv numpy ortools``.
