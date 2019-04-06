@@ -14,3 +14,7 @@ Mal -> Ghent -> Leest -> Peer -> As -> Tielt -> Lot -> Puurs -> Lint -> Heist ->
 
 Note that we have interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke) (because the village of [Béré](https://en.wikipedia.org/wiki/B%C3%A9r%C3%A9,_Burkina_Faso) in Burkina Faso would be uncharacteristic), and suppose that Mr. Gooris will start and end his party tour in the village of [Mal](https://nl.wikipedia.org/wiki/Mal_(Tongeren)).
 
+## Solution
+
+(max number of combinations)
+(requirements)
