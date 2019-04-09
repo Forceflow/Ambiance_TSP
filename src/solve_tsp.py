@@ -55,6 +55,18 @@ def print_original_route(data, printactivities):
 	original+='{}'.format(data['places'][0]['Place'])
 	print(original)
 
+# Print solution to easy paste in Google Maps polyline example
+def print_solution_gmaps(manager, routing, assignment, data):
+	# print('Objective: {} miles'.format(assignment.ObjectiveValue()))
+	index = routing.Start(0)
+	print("{lat: ", data['places'][manager.IndexToNode(index)]['Lat'], ", lng: ", data['places'][manager.IndexToNode(index)]['Long'], "}, //", data['places'][manager.IndexToNode(index)]['Place'])
+	while not routing.IsEnd(index):
+		print("{lat: ", data['places'][manager.IndexToNode(index)]['Lat'], ", lng: ", data['places'][manager.IndexToNode(index)]['Long'], "}, //", data['places'][manager.IndexToNode(index)]['Place'])
+		previous_index = index
+		index = assignment.Value(routing.NextVar(index))
+	# Reached the end
+	print("{lat: ", data['places'][manager.IndexToNode(index)]['Lat'], ", lng: ", data['places'][manager.IndexToNode(index)]['Long'], "}, //", data['places'][manager.IndexToNode(index)]['Place'])
+
 # Print the ORTools-generated solution
 def print_solution(manager, routing, assignment, data, printactivities):
 	# print('Objective: {} miles'.format(assignment.ObjectiveValue()))
@@ -127,7 +139,7 @@ def main():
 	# Configure Routing Search Parameters
 	search_parameters = pywrapcp.DefaultRoutingSearchParameters()
 	# Naive search: follow shortest arcs
-	#search_parameters.first_solution_strategy = (routing_enums_pb2.FirstSolutionStrategy.PATH_CHEAPEST_ARC)
+	# search_parameters.first_solution_strategy = (routing_enums_pb2.FirstSolutionStrategy.PATH_CHEAPEST_ARC)
 	# Better: Continue searching even after first optimum (which might be local)
 	# If we use guided local search, we got to time limit the solution
 	search_parameters.local_search_metaheuristic = (routing_enums_pb2.LocalSearchMetaheuristic.GUIDED_LOCAL_SEARCH)
@@ -141,6 +153,8 @@ def main():
 	if assignment:
 		print("# Optimized route:")
 		print_solution(manager, routing, assignment, data_model, True)
+		# Print solution that can be easily pasted into JavaScript calls for a Google Map
+		#print_solution_gmaps(manager, routing, assignment, data_model)
 	else:
 		print("# Oops, could not optimize route")
 
