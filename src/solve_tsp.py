@@ -1,12 +1,13 @@
 import csv
 import math
+import argparse
 import numpy as np
 from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
 
 # Load places from CSV formatted as Placename, Latitude, Longitude
-def parseCSV():
-	places = list(csv.DictReader(open('ambiance.csv', newline='')))
+def parseCSV(filename):
+	places = list(csv.DictReader(open(filename, newline='')))
 	print("# Loaded",len(places),"places from ambiance.csv:")
 	for item in places:
 		print("  ", item["Place"], "|",item["Activity"], "|", item["Lat"], item["Long"])
@@ -73,9 +74,9 @@ def print_solution(manager, routing, assignment, data, printactivities):
 	print(plan_output)
 
 # Create a data model that can be fed to the ORTools solver
-def create_data_model():
+def create_data_model(csvfile):
 	# Read the CSV
-	places = parseCSV()
+	places = parseCSV(csvfile)
 	# Extract just the coordinates and use them to build the distance matrix
 	coords = extractCoords(places)
 	distancem = compute_euclidean_distance_matrix(coords)
@@ -92,8 +93,17 @@ def create_data_model():
 
 def main():
 	print("# Brought to you by Nerdland podcast - www.nerdland.be")
+	inputfile = ""
+
+	parser = argparse.ArgumentParser()
+	parser.add_argument("csvfile", type=str, help="The path to the .csv file with the locations")
+	args = parser.parse_args()
+	csvfile = args.csvfile
+
+	print("# Info: Using ", csvfile, "as input for location data")
+
 	# Get all our data and setup all related model data
-	data_model = create_data_model()
+	data_model = create_data_model(csvfile)
 
 	# Print original route
 	print("# Original route:")
