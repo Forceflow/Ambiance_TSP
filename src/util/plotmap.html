@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Quick and dirty map plotter (based on Google's Polylines example)</title>
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+      height: 425px;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <script>
+
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 3,
+        center: { lat: 0, lng: -180 },
+        mapTypeId: 'terrain'
+      });
+
+      var lineSymbol = {
+          path: google.maps.SymbolPath.CIRCLE
+        };
+
+		// PASTE PROGRAM OUTPUT HERE
+      var flightPlanCoordinates = [
+      {lat:  50.9933570000 , lng:  4.8235520000 }, // Aarschot
+{lat:  50.9933570000 , lng:  4.8235520000 }, // Aarschot
+{lat:  51.0702290000 , lng:  4.9860840000 }, // Veerle
+{lat:  51.1240315 , lng:  4.9761357 }, // Stelen
+{lat:  51.1633770000 , lng:  4.9904810000 }, // Geel
+{lat:  51.1324490000 , lng:  5.0719050000 }, // Meerhout
+{lat:  51.066528 , lng:  5.0373324 }, // Schoot
+{lat:  50.9463190000 , lng:  5.1093120000 }, // Halen
+{lat:  50.8726967 , lng:  5.1267036 }, // Grazen
+{lat:  50.8093100000 , lng:  4.9373850000 }, // Tienen
+{lat:  50.78801405 , lng:  5.05793363 }, // Neerhespen
+{lat:  50.7052793 , lng:  5.14855026 }, // Kortijs
+{lat:  50.6985770000 , lng:  5.2597480000 }, // Waremme
+{lat:  50.7633827 , lng:  5.3063809 }, // Veulen
+{lat:  50.79172375 , lng:  5.31104095 }, // Voort
+{lat:  50.7938946 , lng:  5.36599574 }, // Groot-Loon
+{lat:  50.7265750000 , lng:  5.4259090000 }, // Herstappe
+{lat:  50.8921566 , lng:  5.4734935 }, // Beverst
+{lat:  50.8725310000 , lng:  5.5761630000 }, // Mopertingen
+{lat:  50.832524 , lng:  5.5538483 }, // Grote Spouwen
+{lat:  50.7954040000 , lng:  5.6130030000 }, // Riemst
+{lat:  50.7979923 , lng:  5.6330852 }, // Zussen
+{lat:  50.7947500000 , lng:  5.6671560000 }, // Kanne
+{lat:  50.9918090000 , lng:  5.7350860000 }, // Leut
+{lat:  51.0125840000 , lng:  5.7148690000 }, // Lanklaar
+{lat:  51.0182495 , lng:  5.616166 }, // Niel-Bij-As
+{lat:  51.0024050000 , lng:  5.5824700000 }, // As
+{lat:  51.0770409 , lng:  5.53254137 }, // Wijshagen
+{lat:  51.0952410000 , lng:  5.5242740000 }, // Meeuwen
+{lat:  51.1801910000 , lng:  5.5574350000 }, // Hees
+{lat:  51.2600688000 , lng:  5.5418575000 }, // Heerstraat
+{lat:  51.1320750000 , lng:  5.4600810000 }, // Peer
+{lat:  51.0290510000 , lng:  5.3707290000 }, // Houthalen
+{lat:  51.0219890000 , lng:  5.3182340000 }, // Zolder
+{lat:  51.0505710000 , lng:  5.2192600000 }, // Beringen
+{lat:  51.2210433 , lng:  5.2040759 }, // Rauw
+{lat:  51.2405570000 , lng:  5.1419050000 }, // Witgoor
+{lat:  51.1969641 , lng:  5.1282765 }, // Ginderbuiten
+{lat:  51.1945510000 , lng:  5.1199910000 }, // Mol
+{lat:  51.2684390000 , lng:  5.0833650000 }, // Retie
+{lat:  51.4088720000 , lng:  4.9966370000 }, // Weelde
+{lat:  51.40091919 , lng:  4.9445297 }, // Zevendonk
+{lat:  51.3150590000 , lng:  4.8588300000 }, // Beerse
+{lat:  51.3979280000 , lng:  4.7979930000 }, // Wortel
+{lat:  51.3046340000 , lng:  4.7363680000 }, // Malle
+{lat:  51.2228050000 , lng:  4.6550590000 }, // Antwerpen
+{lat:  51.2419810000 , lng:  4.6466350000 }, // Halle
+{lat:  51.2368080000 , lng:  4.5835930000 }, // Schilde
+{lat:  51.1902600000 , lng:  4.5622570000 }, // Ranst
+{lat:  51.2314340000 , lng:  4.5258590000 }, // Wijnegem
+{lat:  51.2611080000 , lng:  4.5082260000 }, // Schoten
+{lat:  51.1350160000 , lng:  4.4492730000 }, // Kontich
+{lat:  51.0931500000 , lng:  4.4219300000 }, // Rumst
+{lat:  51.1039260000 , lng:  4.4035360000 }, // Reeth
+{lat:  51.1232870000 , lng:  4.3462970000 }, // Schelle
+{lat:  51.1034080000 , lng:  4.190123 }, // Weert
+{lat:  51.0916290000 , lng:  4.1365730000 }, // Hamme
+{lat:  51.2062260000 , lng:  4.0745420000 }, // Kemzeke
+{lat:  51.2072200000 , lng:  4.0395840000 }, // Stekene
+{lat:  51.0283200000 , lng:  4.0615920000 }, // Appels
+{lat:  50.8982990000 , lng:  4.0514220000 }, // Welle
+{lat:  50.8254777 , lng:  3.9454543 }, // Voorde
+{lat:  50.8732920000 , lng:  3.8214110000 }, // Zottegem
+{lat:  50.946707 , lng:  3.74420963 }, // Munte
+{lat:  50.9925760000 , lng:  3.7937960000 }, // Melle
+{lat:  51.1569940000 , lng:  3.7319510000 }, // Kluizen
+{lat:  51.0055480000 , lng:  3.7112050000 }, // Zwijnaarde
+{lat:  50.9953920000 , lng:  3.6454350000 }, // De Pinte
+{lat:  50.9836600000 , lng:  3.5513340000 }, // Aerseele
+{lat:  51.0012117 , lng:  3.50175217 }, // Zeveren
+{lat:  51.0994200000 , lng:  3.3714670000 }, // Sint-Maria-Aalter
+{lat:  51.2735510000 , lng:  3.0335410000 }, // Den Haan
+{lat:  51.1034654 , lng:  2.8901998 }, // Leke
+{lat:  51.1310220000 , lng:  2.7521150000 }, // Nieuport
+{lat:  51.0970790000 , lng:  2.5869780000 }, // Panne
+{lat:  50.9035513 , lng:  2.78875853 }, // Woesten
+{lat:  50.9139350000 , lng:  2.9194720000 }, // Langemark
+{lat:  51.0012605 , lng:  2.8702221 }, // Woumen
+{lat:  51.0536710000 , lng:  2.8732280000 }, // Beerst
+{lat:  51.0290062 , lng:  2.9637026 }, // Werken
+{lat:  50.9346940000 , lng:  3.1516610000 }, // Rumbeke
+{lat:  50.8493740000 , lng:  3.1049700000 }, // Dadizele
+{lat:  50.7938330000 , lng:  3.1951350000 }, // Lauwe
+{lat:  50.7820590000 , lng:  3.4115370000 }, // Heestert
+{lat:  50.8842710000 , lng:  3.4403230000 }, // Waregem
+{lat:  50.87080215 , lng:  3.60016059 }, // Eine
+{lat:  50.8504466 , lng:  3.58975454 }, // Bevere
+{lat:  50.7466660000 , lng:  3.5955680000 }, // Ronse
+{lat:  50.7654043 , lng:  3.8392513 }, // Goeferdinge
+{lat:  50.7169480000 , lng:  3.9372270000 }, // Bever
+{lat:  50.5545020000 , lng:  4.1029840000 }, // Naast
+{lat:  50.7646770000 , lng:  4.3124320000 }, // Beersel
+{lat:  50.8053950000 , lng:  4.2336680000 }, // Vlezenbeek
+{lat:  50.9083290000 , lng:  4.2014370000 }, // Asse
+{lat:  50.9727615 , lng:  4.306199 }, // Imde
+{lat:  50.9747370000 , lng:  4.4729640000 }, // Weerde
+{lat:  51.0108505 , lng:  4.5143485 }, // Muizen
+{lat:  50.7985459 , lng:  4.5501465 }, // Eizer
+{lat:  50.8272610000 , lng:  4.7579040000 }, // Bierbeek
+{lat:  51.0780830000 , lng:  4.7228340000 }, // Heist-op-den-Berg
+{lat:  51.0573009 , lng:  4.7475102 }, // Zonderschot
+{lat:  50.9933570000 , lng:  4.8235520000 }, // Aarschot
+      ];
+      var flightPath = new google.maps.Polyline({
+        path: flightPlanCoordinates,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      });
+
+      var marker, i;
+      for (i = 0; i < flightPlanCoordinates.length; i++) {
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(flightPlanCoordinates[i]['lat'],flightPlanCoordinates[i]['lng']),
+          icon: {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 3
+    },
+          map: map,
+        });
+      }
+
+      flightPath.setMap(map);
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_MAPS_KEY&callback=initMap">
+    </script>
+</body>
+
+</html>
