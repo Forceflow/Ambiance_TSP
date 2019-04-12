@@ -109,10 +109,13 @@ def main():
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument("csvfile", type=str, help="The path to the .csv file with the locations")
+	parser.add_argument("--gmapjs", action="store_true")
 	args = parser.parse_args()
 	csvfile = args.csvfile
 
 	print("# Info: Using ", csvfile, "as input for location data")
+	if(args.gmapjs):
+		print("# Info: Printing output as JS code for Google Maps")
 
 	# Get all our data and setup all related model data
 	data_model = create_data_model(csvfile)
@@ -144,7 +147,7 @@ def main():
 	# If we use guided local search, we got to time limit the solution
 	search_parameters.local_search_metaheuristic = (routing_enums_pb2.LocalSearchMetaheuristic.GUIDED_LOCAL_SEARCH)
 	search_parameters.time_limit.seconds = 30
-	
+
 	# Solve it
 	print("# Solving route (time limit:", search_parameters.time_limit.seconds, "seconds)")
 	assignment = routing.SolveWithParameters(search_parameters)
@@ -152,9 +155,12 @@ def main():
 	# Print optimized route
 	if assignment:
 		print("# Optimized route:")
-		print_solution(manager, routing, assignment, data_model, True)
-		# Print solution that can be easily pasted into JavaScript calls for a Google Map
-		#print_solution_gmaps(manager, routing, assignment, data_model)
+		if(args.gmapjs):
+			# Print solution that can be easily pasted into JavaScript calls for a Google Map
+			print_solution_gmaps(manager, routing, assignment, data_model)
+		else:
+			# Print solution normally using arrows
+			print_solution(manager, routing, assignment, data_model, True)
 	else:
 		print("# Oops, could not optimize route")
 
