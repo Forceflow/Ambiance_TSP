@@ -44,6 +44,9 @@ The script came up with the following solution:
 ## Installation
 The script requires **Python 3.6** or newer and depends on the , ``csv``, ``numpy`` and ``ortools`` packages, which you can install using your favorite package manager, for example: ``pip install csv numpy ortools``.
 
+## Visualisation
+A quick and dirty Google Maps example to plot the results is included in ``src\util\plotmap.html``. You can use the command ``solve_tsp.py --gmapjs ambiance.csv``to output the result as copy-pastable JavaScript coordinates. Please note that in order to use this rudimentary visualizer, you'll have to generate and specify your Google Maps API key in the source code.
+
 ## Possible improvements:
  * Convert from Latitude/Longitude to actual kilometers using earth curvature, for more detailed stats
  * Use the Google Maps (or similar) API to fetch actual paths and their lengths between each location. (Like [here](http://www.theprojectspot.com/tutorial-post/solving-traveling-salesman-problem-using-google-maps-and-genetic-algorithms/9)).
