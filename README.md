@@ -10,8 +10,6 @@ During the [March 2019 edition](https://soundcloud.com/lieven-scheire/nerdland-m
 
 This is a classic example of a [Traveling Salesman](https://en.wikipedia.org/wiki/Travelling_salesman_problem) problem, a well-known problem in Computer Sciences which is [NP-hard](https://en.wikipedia.org/wiki/NP-hardness), which means that the worst-case running time of any problem-solving technique will increase [superpolynomially](https://en.wikipedia.org/wiki/Time_complexity#Polynomial_time) with the number of cities. In this instance, Mr. Gooris visits 26 locations in the following order, derived from the lyrics:
 
-We execute the script as ``solve_tsp.py ambiance.csv`` and get the following result:
-
 ```
 Mal -> Ghent -> Leest -> Peer -> As -> Tielt -> Lot -> Puurs -> Lint -> Heist -> Reet -> Bree -> Schriek -> Geel -> Leut -> Doel -> Duffel -> Sinaai -> Vorst -> Niel -> Bere* -> Gits -> Boom -> Haacht -> Mal
 ```
