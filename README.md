@@ -14,7 +14,7 @@ This is a classic example of a [Traveling Salesman](https://en.wikipedia.org/wik
 Mal -> Ghent -> Leest -> Peer -> As -> Tielt -> Lot -> Puurs -> Lint -> Heist -> Reet -> Bree -> Schriek -> Geel -> Leut -> Doel -> Duffel -> Sinaai -> Vorst -> Niel -> Bere* -> Gits -> Boom -> Haacht -> Mal
 ```
 
-Note that we have interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke) (because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic), and suppose that Mr. Gooris will start and end his party tour in the same location.
+Note that we have interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke) (because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic), and suppose that Mr. Gooris will start and end his party tour in the same location. We name this problem TSP, a _Travelling Sam Problem_.
 
 ## Solution strategy
 
