@@ -1,7 +1,7 @@
 ## Ambiance_TSP
 A Traveling Salesman problem based on the song [_Ambiance, Ambiance_](https://www.youtube.com/watch?v=EqdQyoAUQZ0) by [Sam Gooris](https://nl.wikipedia.org/wiki/Sam_Gooris). (And some other songs.)
 
-![nerdland_logo](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/nerdland_logo.JPG "Nerdland Logo")
+[![nerdland_logo](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/nerdland_logo.JPG)](http://www.nerdland.be)
 
 ## Problem description
 In 2013, Belgian songsmith [Sam Gooris](https://nl.wikipedia.org/wiki/Sam_Gooris) rocked the charts with his dance hit [_Ambiance, Ambiance_](https://www.youtube.com/watch?v=EqdQyoAUQZ0).
