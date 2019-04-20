@@ -18,7 +18,8 @@ Note that we have interpeted the village of _Bere_ as slang for the city of [Meu
 
 ## Solution strategy
 
-With _n_ being the number of locations, there are _(n-1)!/2_ possible solutions, which in this case results in 7.755605e+24. We solve this problem by using the constraint optimization solver from Google's [ORtools](https://developers.google.com/optimization/). The method we use is based on [this article](https://developers.google.com/optimization/routing/tsp).
+With _n_ being the number of locations, there are _(n-1)!/2_ possible solutions, which in this case results in 1.2926008e+22
+. We solve this problem by using the constraint optimization solver from Google's [ORtools](https://developers.google.com/optimization/). The method we use is based on [this article](https://developers.google.com/optimization/routing/tsp).
 
 We use the latitude and longitute of the center (as per Google Maps) of every location in the list, stored together with the location name and the planned activity of Mr. Gooris (not needed to solve the problem, but funny) in the CSV file ``ambiance.csv``. We use the Euclidean (straight line) distance between these (lat, long) coordinates in the distance matrix.
 
