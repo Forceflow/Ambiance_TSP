@@ -1,24 +1,25 @@
 ## Ambiance_TSP
 A Traveling Salesman problem based on the song [_Ambiance, Ambiance_](https://www.youtube.com/watch?v=EqdQyoAUQZ0) by [Sam Gooris](https://nl.wikipedia.org/wiki/Sam_Gooris). (And some other songs.)
 
+[![nerdland_logo](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/nerdland_logo.JPG)](http://www.nerdland.be)
+
 ## Problem description
-In 2013, Belgian songsmith [Sam Gooris](https://nl.wikipedia.org/wiki/Sam_Gooris) rocked the charts with his dance hit [_Ambiance, Ambiance_](https://www.youtube.com/watch?v=EqdQyoAUQZ0).
+In 1999, Belgian songsmith [Sam Gooris](https://nl.wikipedia.org/wiki/Sam_Gooris) rocked the charts with his dance hit [_Ambiance, Ambiance_](https://www.youtube.com/watch?v=EqdQyoAUQZ0).
 
 During the [March 2019 edition](https://soundcloud.com/lieven-scheire/nerdland-maandoverzicht-maart-2019) of the [Nerdland Science Podcast](www.nerdland.be) ([listen at 39:08](https://soundcloud.com/lieven-scheire/nerdland-maandoverzicht-maart-2019#t=39:11)), whilst discussing the news that [amoeba had been succesfully used in problem-solving](https://phys.org/news/2018-12-amoeba-approximate-solutions-np-hard-problem.html), we looked at the [lyrics](https://muzikum.eu/en/123-173-5017/sam-gooris/ambiance-lyrics.html) of this song. In his anthem, Mr. Gooris eloquently describes how he visits several Belgian villages and cities in order to engage in rhyming party-related activities. However, the order in which he visits these locations is far from optimal. [Bart Van Peer](https://twitter.com/zebbedeusje) posed the question: **_What if Mr. Gooris could rearrange his travel itinerary (and, subsequently, his lyrics) to allow for an optimal usage of his time and mileage?_**
 
-This is a classic example of a [Traveling Salesman](https://en.wikipedia.org/wiki/Travelling_salesman_problem) problem, a well-known problem in Computer Sciences which is [NP-hard](https://en.wikipedia.org/wiki/NP-hardness), which means that the worst-case running time of any problem-solving technique will increase [superpolynomially](https://en.wikipedia.org/wiki/Time_complexity#Polynomial_time) with the number of cities. In this instance, Mr. Gooris visits 26 locations in the following order, derived from the lyrics:
-
-We execute the script as ``solve_tsp.py ambiance.csv`` and get the following result:
+This is a classic example of a [Traveling Salesman](https://en.wikipedia.org/wiki/Travelling_salesman_problem) problem, a well-known problem in Computer Sciences which is [NP-hard](https://en.wikipedia.org/wiki/NP-hardness), which means that the worst-case running time of any problem-solving technique will increase [superpolynomially](https://en.wikipedia.org/wiki/Time_complexity#Polynomial_time) with the number of cities. In this instance, Mr. Gooris visits 24 locations in the following order, derived from the lyrics:
 
 ```
 Mal -> Ghent -> Leest -> Peer -> As -> Tielt -> Lot -> Puurs -> Lint -> Heist -> Reet -> Bree -> Schriek -> Geel -> Leut -> Doel -> Duffel -> Sinaai -> Vorst -> Niel -> Bere* -> Gits -> Boom -> Haacht -> Mal
 ```
 
-Note that we have interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke) (because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic), and suppose that Mr. Gooris will start and end his party tour in the same location.
+Note that we have interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke) (because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic), and suppose that Mr. Gooris will start and end his party tour in the same location. We name this problem TSP, a _Travelling Sam Problem_.
 
 ## Solution strategy
 
-With _n_ being the number of locations, there are _(n-1)!/2_ possible solutions, which in this case results in 7.755605e+24. We solve this problem by using the constraint optimization solver from Google's [ORtools](https://developers.google.com/optimization/). The method we use is based on [this article](https://developers.google.com/optimization/routing/tsp).
+With _n_ being the number of locations, there are _(n-1)!/2_ possible solutions, which in this case results in 1.2926008e+22
+. We solve this problem by using the constraint optimization solver from Google's [ORtools](https://developers.google.com/optimization/). The method we use is based on [this article](https://developers.google.com/optimization/routing/tsp).
 
 We use the latitude and longitute of the center (as per Google Maps) of every location in the list, stored together with the location name and the planned activity of Mr. Gooris (not needed to solve the problem, but funny) in the CSV file ``ambiance.csv``. We use the Euclidean (straight line) distance between these (lat, long) coordinates in the distance matrix.
 
@@ -45,7 +46,7 @@ The script came up with the following solution:
 The script requires **Python 3.6** or newer and depends on the , ``csv``, ``numpy`` and ``ortools`` packages, which you can install using your favorite package manager, for example: ``pip install csv numpy ortools``.
 
 ## Visualisation
-A quick and dirty Google Maps example to plot the results is included in ``src\util\plotmap.html``. You can use the command ``solve_tsp.py --gmapjs ambiance.csv``to output the result as copy-pastable JavaScript coordinates. Please note that in order to use this rudimentary visualizer, you'll have to generate and specify your Google Maps API key in the source code.
+A quick and dirty Google Maps example to plot the results is included in ``src\util\plotmap.html``. You can use the command ``solve_tsp.py --gmapjs ambiance.csv``to output the result as copy-pastable JavaScript coordinates. Please note that in order to use this rudimentary visualizer, you'll have to generate and specify your Google Maps API key (see [Google Dev Console](https://console.developers.google.com)) in the source code.
 
 ## Possible improvements:
  * Convert from Latitude/Longitude to actual kilometers using earth curvature, for more detailed stats
