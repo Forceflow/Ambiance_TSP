@@ -46,7 +46,7 @@ Mal -> As -> Leut -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint
 
 As you can see, introducing the city of _Mere_ to the solution changes the path slightly between Ghent and Lot.
 
-## Extra
+## Extra: Let's try another song!
 To put the algorithm through a more thorough test, we also tested with the song [_Vlaand'renland_](https://www.youtube.com/watch?v=Qb9bvgouEnA) by Nerdland jingle producer and well-known rockabilly [Johnny Trash](https://www.johnnytrash.be/). In this song, ca. 100 locations are mentioned. The data for this song is in ``johnny_trash.csv``. Mr. Trash does not specify any activities he undertakes at these locations, but it's safe to assume the default is ``heavy drinking``.
 
 The script came up with the following solution:
