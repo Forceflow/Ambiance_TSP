@@ -14,7 +14,7 @@ This is a classic example of a [Traveling Salesman](https://en.wikipedia.org/wik
 Mal -> Ghent -> Leest -> Peer -> As -> Tielt -> Lot -> Puurs -> Lint -> Heist -> Reet -> Bree -> Schriek -> Geel -> Leut -> Doel -> Duffel -> Sinaai -> Vorst -> Niel -> Bere* -> Gits -> Boom -> Haacht -> Mal
 ```
 
-Note that we have interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke) (because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic), and suppose that Mr. Gooris will start and end his party tour in the same location. We name this problem TSP, a _Travelling Sam Problem_.
+We name this problem TSP, a _Travelling Sam Problem_.
 
 ## Solution strategy
 
@@ -34,6 +34,17 @@ Mal -> As -> Leut -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint
 The village of [Mal](https://nl.wikipedia.org/wiki/Mal_(Tongeren)) is chosen as a startpoint here, but the solution is a closed loop, so it doesn't matter where Mr. Gooris chooses to start.
 
 ![TSP_difference](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/TSP_diff.gif "Difference between original and optimized itinerary")
+
+## Bere or Mere?
+We originally interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke), because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic.
+
+Now, several listeners have informed us that they - after careful listening - don't hear _Bere_, but hear _Mere_, which could be slang for the city of [_Erpe-Mere_](https://en.wikipedia.org/wiki/Erpe-Mere). We have included an alternative list of locations in ``ambiance_mere.csv``, and ran the solver again, resulting in the following (slightly altered) optimized path:
+
+```
+Mal -> As -> Leut -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint -> Reet -> Leest -> Boom -> Niel -> Puurs -> Doel -> Sinaai -> Heist -> Gits -> Tielt -> Ghent -> Mere -> Lot -> Vorst ->  Mal
+```
+
+As you can see, introducing the city of _Mere_ to the solution changes the path slightly between Ghent and Lot.
 
 ## Extra
 To put the algorithm through a more thorough test, we also tested with the song [_Vlaand'renland_](https://www.youtube.com/watch?v=Qb9bvgouEnA) by Nerdland jingle producer and well-known rockabilly [Johnny Trash](https://www.johnnytrash.be/). In this song, ca. 100 locations are mentioned. The data for this song is in ``johnny_trash.csv``. Mr. Trash does not specify any activities he undertakes at these locations, but it's safe to assume the default is ``heavy drinking``.
