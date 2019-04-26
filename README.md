@@ -59,8 +59,7 @@ The script requires **Python 3.6** or newer and depends on the , ``csv``, ``nump
 ## Visualisation
 A quick and dirty Google Maps example to plot the results is included in ``src\util\plotmap.html``. You can use the command ``solve_tsp.py --gmapjs ambiance.csv``to output the result as copy-pastable JavaScript coordinates. Please note that in order to use this rudimentary visualizer, you'll have to generate and specify your Google Maps API key (see [Google Dev Console](https://console.developers.google.com)) in the source code.
 
-## Possible improvements:
- * Convert from Latitude/Longitude to actual kilometers using earth curvature, for more detailed stats
- * Use the Google Maps (or similar) API to fetch actual paths and their lengths between each location. (Like [here](http://www.theprojectspot.com/tutorial-post/solving-traveling-salesman-problem-using-google-maps-and-genetic-algorithms/9)).
+## See also:
+ * Github user [soniCaH](https://github.com/soniCaH/Traveling-Sam-Gooris-Problem) has developed a method which uses the Google Maps API to get the actual paths, and solves the problem in Excel: [Traveling-Sam-Gooris-Problem](https://github.com/soniCaH/Traveling-Sam-Gooris-Problem).
  * Figure out the _exact_ location where Mr. Gooris would like to engage in party-related activities for added accuracy
  * Attack the problem using a different technique, like genetic algorithms programming (Like [here](https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algorithm-tutorial-for-python-6fe5d2b3ca35)).
