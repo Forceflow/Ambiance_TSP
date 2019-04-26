@@ -35,16 +35,22 @@ The village of [Mal](https://nl.wikipedia.org/wiki/Mal_(Tongeren)) is chosen as 
 
 ![TSP_difference](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/TSP_diff.gif "Difference between original and optimized itinerary")
 
-## *Bere or Mere?
+## *Bere or Mere? Leut or Jeuk?
 We originally interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke), because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic.
 
-Now, several listeners have informed us that they - after careful listening of the song - don't hear _Bere_, but _Mere_, which could be slang for the city of [_Erpe-Mere_](https://en.wikipedia.org/wiki/Erpe-Mere). The jury's still out on which interpretation is correct, but we have included an alternative list of locations in ``ambiance_mere.csv``, and ran the solver again, resulting in the following (slightly altered) optimized path:
+* Now, several listeners have informed us that they - after careful listening of the song - don't hear _Bere_, but _Mere_, which could be slang for the city of [_Erpe-Mere_](https://en.wikipedia.org/wiki/Erpe-Mere). 
+* The same goes for the part about _leuk in_, where we heard _leut_, but several listeners informed us that _Jeuk_ is also a Flemish village, and would fit better into the rhyming scheme.
+
+The jury's still out on which interpretation is correct, but we have included an alternative list of locations in ``ambiance_alt.csv``, and ran the solver again, resulting in the following (slightly altered) optimized path:
 
 ```
 Mal -> As -> Leut -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint -> Reet -> Leest -> Boom -> Niel -> Puurs -> Doel -> Sinaai -> Heist -> Gits -> Tielt -> Ghent -> Mere -> Lot -> Vorst ->  Mal
 ```
 
-As you can see, introducing the city of _Mere_ to the solution changes the path slightly between Ghent and Lot.
+Mal -> As -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint -> Reet -> Leest -> Boom -> Niel -> Puurs -> Doel -> Sinaai -> Heist -> Gits -> Tielt -> Ghent -> Mere -> Lot -> Vorst -> Jeuk ->  Mal
+
+
+As you can see, introducing the locations of _Mere_ and _Jeuk_ to the solution changes the path slightly between Ghent and Mal.
 
 ## Extra: Let's try another song!
 To put the algorithm through a more thorough test, we also tested with the song [_Vlaand'renland_](https://www.youtube.com/watch?v=Qb9bvgouEnA) by Nerdland jingle producer and well-known rockabilly [Johnny Trash](https://www.johnnytrash.be/). In this song, ca. 100 locations are mentioned. The data for this song is in ``johnny_trash.csv``. Mr. Trash does not specify any activities he undertakes at these locations, but it's safe to assume the default is ``heavy drinking``.
