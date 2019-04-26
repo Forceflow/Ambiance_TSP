@@ -36,10 +36,9 @@ The village of [Mal](https://nl.wikipedia.org/wiki/Mal_(Tongeren)) is chosen as 
 ![TSP_difference](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/TSP_diff.gif "Difference between original and optimized itinerary")
 
 ## *Bere or Mere? Leut or Jeuk?
-We originally interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke), because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic.
 
-* Now, several listeners have informed us that they - after careful listening of the song - don't hear _Bere_, but _Mere_, which could be slang for the city of [_Erpe-Mere_](https://en.wikipedia.org/wiki/Erpe-Mere). 
-* The same goes for the part about _leuk in_, where we heard _leut_, but several listeners informed us that _Jeuk_ is also a Flemish village, and would fit better into the rhyming scheme.
+* We originally interpeted the village of _Bere_ as slang for the city of [Meulebeke](https://en.wikipedia.org/wiki/Meulebeke), because the village of [Bere](https://en.wikipedia.org/wiki/Bere,_Botswana) in Botswana would be uncharacteristic. Now, several listeners have informed us that they - after careful listening of the song - don't hear _Bere_, but _Mere_, which could be slang for the city of [_Erpe-Mere_](https://en.wikipedia.org/wiki/Erpe-Mere). 
+* The same goes for the part about _leuk in_, where we heard _Leut_, but several listeners informed us that _Jeuk_ is also a Flemish village, and would fit better into the rhyming scheme.
 
 The jury's still out on which interpretation is correct, but we have included an alternative list of locations in ``ambiance_alt.csv``, and ran the solver again, resulting in the following (slightly altered) optimized path:
 
