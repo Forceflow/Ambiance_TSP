@@ -43,11 +43,8 @@ The village of [Mal](https://nl.wikipedia.org/wiki/Mal_(Tongeren)) is chosen as 
 The jury's still out on which interpretation is correct, but we have included an alternative list of locations in ``ambiance_alt.csv``, and ran the solver again, resulting in the following (slightly altered) optimized path:
 
 ```
-Mal -> As -> Leut -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint -> Reet -> Leest -> Boom -> Niel -> Puurs -> Doel -> Sinaai -> Heist -> Gits -> Tielt -> Ghent -> Mere -> Lot -> Vorst ->  Mal
-```
-
 Mal -> As -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint -> Reet -> Leest -> Boom -> Niel -> Puurs -> Doel -> Sinaai -> Heist -> Gits -> Tielt -> Ghent -> Mere -> Lot -> Vorst -> Jeuk ->  Mal
-
+```
 
 As you can see, introducing the locations of _Mere_ and _Jeuk_ to the solution changes the path slightly between Ghent and Mal.
 
