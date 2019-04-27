@@ -62,6 +62,8 @@ The script requires **Python 3.6** or newer and depends on the , ``csv``, ``nump
 A quick and dirty Google Maps example to plot the results is included in ``src\util\plotmap.html``. You can use the command ``solve_tsp.py --gmapjs ambiance.csv``to output the result as copy-pastable JavaScript coordinates. Please note that in order to use this rudimentary visualizer, you'll have to generate and specify your Google Maps API key (see [Google Dev Console](https://console.developers.google.com)) in the source code.
 
 ## See also:
+A lot of people took up the challenge to solve this TSP
  * Github user [soniCaH](https://github.com/soniCaH/Traveling-Sam-Gooris-Problem) has developed a method which uses the Google Maps API to get the actual paths, and solves the problem in Excel: [Traveling-Sam-Gooris-Problem](https://github.com/soniCaH/Traveling-Sam-Gooris-Problem).
- * Figure out the _exact_ location where Mr. Gooris would like to engage in party-related activities for added accuracy
- * Attack the problem using a different technique, like genetic algorithms programming (Like [here](https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algorithm-tutorial-for-python-6fe5d2b3ca35)).
+ * Koos Fransen attacked the problem using ArcGIS - [tweet link](https://twitter.com/Koos_Fransen)
+ * Q-Music DJ Maarten Vancoillie suggested we added Sam's hometown of Brasschaat to the tour - [tweet link](https://twitter.com/Maartn/status/1119710413233561601?s=20)
+
