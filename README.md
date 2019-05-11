@@ -67,4 +67,5 @@ A lot of people took up the challenge to solve this TSP
  * Martin Fiers made nice write-up on tackling the problem using Python and genetic algorithms: [notebook](https://nbviewer.jupyter.org/gist/martinfiers/e8f3efce89e099653d87fb47a8e10b0e)
  * Koos Fransen attacked the problem using ArcGIS - [tweet link](https://twitter.com/Koos_Fransen/status/1122044998541877248)
  * Q-Music DJ Maarten Vancoillie suggested we added Sam's hometown of Brasschaat to the tour - [tweet link](https://twitter.com/Maartn/status/1119710413233561601?s=20)
+ * Thanks to the following people for also sending in solutions: Keith Meyerscough, Christophe Scholliers, Ward Van Driessche, Wies Vanden Kieboom, Jelle Victoor
 
