@@ -65,6 +65,6 @@ A quick and dirty Google Maps example to plot the results is included in ``src\u
 A lot of people took up the challenge to solve this TSP
  * Github user [soniCaH](https://github.com/soniCaH/Traveling-Sam-Gooris-Problem) has developed a method which uses the Google Maps API to get the actual paths, and solves the problem in Excel: [Traveling-Sam-Gooris-Problem](https://github.com/soniCaH/Traveling-Sam-Gooris-Problem).
  * Martin Fiers made nice write-up on tackling the problem using Python and genetic algorithms: [notebook](https://nbviewer.jupyter.org/gist/martinfiers/e8f3efce89e099653d87fb47a8e10b0e)
- * Koos Fransen attacked the problem using ArcGIS - [tweet link](https://twitter.com/Koos_Fransen)
+ * Koos Fransen attacked the problem using ArcGIS - [tweet link](https://twitter.com/Koos_Fransen/status/1122044998541877248)
  * Q-Music DJ Maarten Vancoillie suggested we added Sam's hometown of Brasschaat to the tour - [tweet link](https://twitter.com/Maartn/status/1119710413233561601?s=20)
 
