@@ -1,7 +1,7 @@
 ## Ambiance_TSP
 A Traveling Salesman problem based on the song [_Ambiance, Ambiance_](https://www.youtube.com/watch?v=EqdQyoAUQZ0) by [Sam Gooris](https://nl.wikipedia.org/wiki/Sam_Gooris). (And some other songs.)
 
-[![nerdland_logo](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/nerdland_logo.JPG)](http://www.nerdland.be)
+[![nerdland_logo](https://github.com/Forceflow/Ambiance_TSP/blob/main/readme_img/nerdland_logo.JPG)](http://www.nerdland.be)
 
 ## Problem description
 In 1999, Belgian songsmith [Sam Gooris](https://nl.wikipedia.org/wiki/Sam_Gooris) rocked the charts with his dance hit [_Ambiance, Ambiance_](https://www.youtube.com/watch?v=EqdQyoAUQZ0).
@@ -33,7 +33,7 @@ Mal -> As -> Leut -> Bree -> Peer -> Geel -> Schriek -> Haacht -> Duffel -> Lint
 
 The village of [Mal](https://nl.wikipedia.org/wiki/Mal_(Tongeren)) is chosen as a startpoint here, but the solution is a closed loop, so it doesn't matter where Mr. Gooris chooses to start.
 
-![TSP_difference](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/TSP_diff.gif "Difference between original and optimized itinerary")
+![TSP_difference](https://github.com/Forceflow/Ambiance_TSP/blob/main/readme_img/TSP_diff.gif "Difference between original and optimized itinerary")
 
 ## *Bere or Mere? Leut or Jeuk?
 
@@ -53,7 +53,7 @@ To put the algorithm through a more thorough test, we also tested with the song 
 
 The script came up with the following solution:
 
-![trash_route](https://github.com/Forceflow/Ambiance_TSP/blob/master/readme_img/trash_route.jpg "Calculated route for Johnny Trash")
+![trash_route](https://github.com/Forceflow/Ambiance_TSP/blob/main/readme_img/trash_route.jpg "Calculated route for Johnny Trash")
 
 ## Installation
 The script requires **Python 3.6** or newer and depends on the , ``csv``, ``numpy`` and ``ortools`` packages, which you can install using your favorite package manager, for example: ``pip install csv numpy ortools``.
